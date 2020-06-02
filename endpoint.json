@@ -1,0 +1,53 @@
+{
+  "label": "Squarespace",
+  "name": "squarespace",
+  "apiVersion": "v1",
+  "internal": false,
+  "configurationType": "GLOBAL",
+  "deployment": {
+    "profiles": [
+      {
+        "name": "default",
+        "label": "Default",
+        "memory": 256,
+        "description": "Default configuration"
+      }
+    ],
+    "allowMultipleInstances": false
+  },
+  "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/squarespace.png",
+  "status": "ACTIVE",
+  "stores": [],
+  "events": [],
+  "functions": [
+    {
+      "label": "GET",
+      "name": "_get"
+    },
+    {
+      "label": "POST",
+      "name": "_post"
+    },
+    {
+      "label": "Post with header",
+      "name": "_postWithHeader"
+    },
+    {
+      "label": "Idempotency Key",
+      "name": "_idempotencyKey"
+    }
+  ],
+  "scripts": [
+    "functions.js",
+    "squarespace-helpers.js"
+  ],
+  "configuration": [
+    {
+      "name": "token",
+      "label": "Token",
+      "description": "OAuth access token. Use it to make API requests.",
+      "type": "text",
+      "required": true
+    }
+  ]
+}
